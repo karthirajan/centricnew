@@ -30,13 +30,17 @@ public class HomePageSteps extends Commonactions {
     public static void SelectLanguage(String Language) throws InterruptedException {
               for (int i = 0; i < 250; i++) {
            WebElement dr = driver.findElement(By.xpath("(//td[@class='csiHeadingColumn']//td[contains(@data-csi-heading,'')])[9]"));
-                      dr.click();
+           Thread.sleep(100);          
+           dr.click();
                 Actions a = new Actions(driver);
               for (int j = 0; j <= i; j++) {
+            	  Thread.sleep(100);
              a.sendKeys(Keys.DOWN).build().perform();
+            // Thread.sleep(300);
                          }
 
                 a.sendKeys(Keys.TAB).build().perform();
+             //   Thread.sleep(300);
             if (dr.getText().equalsIgnoreCase(Language)) {
                     break;
                       }
@@ -49,6 +53,7 @@ public class HomePageSteps extends Commonactions {
               driver.findElement(By.xpath("//span[contains(text(),'User Profile')]")).click();
              Thread.sleep(500);
                    driver.navigate().refresh();
+                   Thread.sleep(300);
 }
 	
 	@Given("Click style tab and get the listed season name in the style tab")

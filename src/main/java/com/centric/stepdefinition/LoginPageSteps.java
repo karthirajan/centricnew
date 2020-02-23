@@ -67,7 +67,37 @@ public class LoginPageSteps extends Commonactions {
 
 	@Then("Logout from the Application")
 	public void logout_from_the_Application() throws InterruptedException {
-		
+		Commonactions.jsWaitForPageLoad(); 
+		driver.findElement(By.xpath("//span[contains(@data-csi-automation,'PageUser')]")).isDisplayed();
+				Thread.sleep(2000);
+	    driver.findElement(By.xpath("//span[contains(@data-csi-automation,'PageUser')]")).click();
+	   //SelectLanguage(); 
+        for (int i = 0; i < 250; i++) {
+     WebElement dr = driver.findElement(By.xpath("(//td[@class='csiHeadingColumn']//td[contains(@data-csi-heading,'')])[9]"));
+     Thread.sleep(100);          
+     dr.click();
+          Actions a = new Actions(driver);
+        for (int j = 0; j <= i; j++) {
+      	  Thread.sleep(100);
+       a.sendKeys(Keys.DOWN).build().perform();
+      // Thread.sleep(300);
+                   }
+
+          a.sendKeys(Keys.TAB).build().perform();
+       //   Thread.sleep(300);
+      if (dr.getText().equalsIgnoreCase("English - UK")) {
+              break;
+                }
+            Thread.sleep(500);
+               }
+         System.out.println("English - UK" + "Language selected");
+             Thread.sleep(500);
+           driver.findElement(By.xpath("//span[contains(text(),'Defaults')]")).click();
+         Thread.sleep(500);
+        driver.findElement(By.xpath("//span[contains(text(),'User Profile')]")).click();
+       Thread.sleep(500);
+             driver.navigate().refresh();
+             Thread.sleep(300);
 		// driver.close();
 	}
 
