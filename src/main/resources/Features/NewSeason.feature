@@ -26,4 +26,5 @@ Feature: Create New season in qakripya.com
     Examples: 
       | language           | style   | scode | sdescription | brand | bcode | bdescription | dept | dcode | ddescription | collection | ccode  | cdesription | styletype |
       | Italian (Italiano) | autumn1 |   100 | new model    | brand |   101 | otto         | dept | ot01  | shirts       | collection | Cot001 | cotton      | Apparel   |
-
+      | Finnish (Suomi)    | spring2 |   101 | new model    | brand |   101 | otto         | dept | ot01  | T-shirts     | collection | Cot001 | cotton      | Apparel   |
+      | English - UK       | winter1 |   102 | new model    | brand |   101 | otto         | dept | ot01  | pants        | collection | Cot001 | cotton      | Apparel   |
