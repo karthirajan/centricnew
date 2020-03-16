@@ -22,7 +22,7 @@ public class Hooks extends Commonactions {
 	@Before
 	public void before() {
 
-		 ca.launch("http://kripyaqa.centricsoftware.com/WebAccess/login.html");
+		 ca.launch("https://win16sql16-qa.centricsoftware.com/WebAccess/login.html");
 
 	}
 	

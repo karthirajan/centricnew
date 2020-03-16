@@ -54,9 +54,9 @@ public class LoginPageSteps extends Commonactions {
 	public void user_launches_centric_application() throws InterruptedException {
 		logger = extent.startTest("Login Application","User launches centric application");
 		lp = new LoginPage();
-		ca.insertText(lp.getUsername(), "automation");
+		ca.insertText(lp.getUsername(), "Administrator");
 		System.out.println("username entered successfully");
-		ca.insertText(lp.getPassword(), "kripya");
+		ca.insertText(lp.getPassword(), "centric8");
 		ca.click(lp.getLogin());
 
 	}
