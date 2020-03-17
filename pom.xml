@@ -4,6 +4,7 @@
 	<groupId>Centric</groupId>
 	<artifactId>Centric</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+<<<<<<< HEAD
 	<name>centric</name>
 	  <properties>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -11,6 +12,13 @@
             <maven.compiler.version>3.6.0</maven.compiler.version>
       </properties>
 
+=======
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+>>>>>>> 543e6d07dd18deee16cd1744df046c6a6c249a31
 	<dependencies>
 			<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 			<dependency>
